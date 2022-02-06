@@ -1,0 +1,200 @@
+/* Site Stylesheet
+    1. Glogal styles
+    2. Structure Styles
+    3. Component Styles
+    4. Page Styles
+======================================== */
+
+/* 1. Global Styles
+======================================== */
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+  --white: hsl(0, 100%, 100%);
+  --transition: all 0.3s linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: var(--white);
+  background-image: url("../images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--violet);
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  line-height: 1.5;
+  padding-bottom: 0.9rem;
+}
+
+p {
+  line-height: 1.5;
+  letter-spacing: 0.02rem;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+}
+
+a {
+  color: var(--white);
+}
+
+@media only screen and (min-width: 376px) {
+  body {
+    background-image: url("../images/bg-desktop.svg");
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    width: 90%;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    letter-spacing: 0.042rem;
+  }
+}
+
+/* 2. Structure Styles
+======================================== */
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  min-height: 100vh;
+}
+
+@media only screen and (min-width: 376px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/* 3. Component Styles
+======================================== */
+
+.primary-btn {
+  width: 200px;
+  padding: 0.8rem 0;
+  border-radius: 30px;
+  margin: 1.4rem 0 0 0;
+  color: var(--violet);
+  font-size: 0.8rem;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+}
+
+.primary-btn:hover {
+  background-color: var(--soft-magenta);
+  color: var(--white);
+}
+
+@media only screen and (min-width: 376px) {
+  .primary-btn {
+    padding: 1.2rem 0;
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+}
+
+/* 4. Page Styles
+======================================== */
+
+header {
+  padding: 2rem 0 3.5rem;
+}
+
+.logo {
+  width: 130px;
+  margin-left: -5px;
+}
+
+.content {
+  text-align: center;
+}
+
+.register {
+  padding: 3.7rem 0;
+}
+
+footer {
+  text-align: center;
+  height: 50px;
+  margin-top: 0.4rem;
+}
+
+.icon {
+  display: inline-block;
+  border: 1px solid var(--white);
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  margin: 0 0.1rem;
+  transition: var(--transition);
+}
+
+.icon:hover {
+  border: 1px solid var(--soft-magenta);
+  color: var(--soft-magenta);
+}
+
+.icon i {
+  font-size: 0.9rem;
+  padding: 0.5rem;
+}
+
+@media only screen and (min-width: 376px) {
+  header {
+    padding: 3.5rem 0 5rem;
+  }
+
+  .logo {
+    width: 220px;
+  }
+
+  .content {
+    display: flex;
+    text-align: left;
+  }
+
+  .image {
+    width: 55%;
+  }
+
+  .register {
+    width: 45%;
+    padding: 3rem 0.5rem 3rem 3rem;
+  }
+
+  footer {
+    text-align: right;
+    height: 100px;
+    margin-top: 1rem;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 0.5rem 0 0.3rem;
+  }
+
+  .icon i {
+    font-size: 1.2rem;
+    padding: 0.7rem;
+  }
+}
